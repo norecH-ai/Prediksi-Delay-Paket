@@ -1,0 +1,87 @@
+{
+  "model": "LogisticRegression (C=1.0) + fitur rekayasa, terstandardisasi",
+  "trained_at_utc": "2026-11-08T08:58:21+00:00",
+  "sklearn_version": "1.9.1",
+  "train_data": "2025-01-01 .. 2026-03-31 (n=33256)",
+  "test_data": "2026-04-01 .. 2026-06-30 (n=6744)",
+  "threshold": {
+    "notify": 0.0909,
+    "priority": 0.4,
+    "rule": "kabari bila p*50000 > (1-p)*5000  =>  p > 5000/55000",
+    "cost_fn_rp": 50000,
+    "cost_fp_rp": 5000
+  },
+  "metrics": {
+    "validation_baseline_LR_fitur_asli": {
+      "n": 6623,
+      "prevalence": 0.2188,
+      "pr_auc": 0.6455,
+      "roc_auc": 0.8313,
+      "brier": 0.1196,
+      "precision@thr": 0.3229,
+      "recall@thr": 0.9172,
+      "cost_per_package_rp": 3010,
+      "cost_never_notify_rp": 10939,
+      "cost_always_notify_rp": 3906
+    },
+    "validation_kandidat_LR_fitur_rekayasa": {
+      "n": 6623,
+      "prevalence": 0.2188,
+      "pr_auc": 0.6602,
+      "roc_auc": 0.8403,
+      "brier": 0.1166,
+      "precision@thr": 0.323,
+      "recall@thr": 0.9213,
+      "cost_per_package_rp": 2973,
+      "cost_never_notify_rp": 10939,
+      "cost_always_notify_rp": 3906
+    },
+    "test_baseline_LR_fitur_asli": {
+      "n": 6744,
+      "prevalence": 0.1392,
+      "pr_auc": 0.3549,
+      "roc_auc": 0.7445,
+      "brier": 0.1059,
+      "precision@thr": 0.2069,
+      "recall@thr": 0.8168,
+      "cost_per_package_rp": 3456,
+      "cost_never_notify_rp": 6962,
+      "cost_always_notify_rp": 4304
+    },
+    "test_final_model": {
+      "n": 6744,
+      "prevalence": 0.1392,
+      "pr_auc": 0.3791,
+      "roc_auc": 0.7592,
+      "brier": 0.1035,
+      "precision@thr": 0.2133,
+      "recall@thr": 0.8243,
+      "cost_per_package_rp": 3340,
+      "cost_never_notify_rp": 6962,
+      "cost_always_notify_rp": 4304
+    }
+  },
+  "input_features": [
+    "jam_pickup",
+    "jarak_km",
+    "jumlah_transit",
+    "janji_hari",
+    "berat_kg",
+    "volume_hub_hari",
+    "kota_tujuan",
+    "layanan",
+    "metode_bayar",
+    "cuaca_saat_pickup",
+    "tanggal_pickup"
+  ],
+  "imputation": {
+    "jarak_km": "median per kota (dari train)",
+    "berat_kg": "median train = 1.340",
+    "cuaca_saat_pickup": "kategori 'tidak_diketahui'"
+  },
+  "known_limitations": [
+    "volume_hub_hari harus tersedia saat prediksi (estimasi beban hub); tanpanya PR-AUC turun tajam.",
+    "Test (Apr-Jun 2026) tidak memuat hari puncak; performa di musim puncak hanya terbukti di validation.",
+    "Pemantauan drift dan retraining berkala diperlukan (pola musiman Maret & Nov-Des)."
+  ]
+}
