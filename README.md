@@ -1,11 +1,11 @@
 # Prediksi Keterlambatan Paket (Hub Bandung) · Tim OTOKOWOK
 
-**Kasus:** 08 · Keterlambatan paket · **Aplikasi:** https://prediksi-delay-paket-a9hwlyfxdj9gg7expzv8cp.streamlit.app/ · **Video:** 
+**Kasus:** 08 · Keterlambatan paket · **Aplikasi:** https://prediksi-delay-paket-a9hwlyfxdj9gg7expzv8cp.streamlit.app/ · **Video:** https://drive.google.com/file/d/1KxLZppon2mMZPtcqVkzfETvZXXt-2byF/view?usp=drive_link
 
 | Anggota | NIM | Bagian yang dikerjakan |
 |---|---|---|
-| Haidar Yahya | 2402909 | Audit dan pembersihan Data, Rekayasa fitur, model, evaluasi, dan Laporan |
-| Achmad Choeron | 2403160 | Video, penjelasan faktor, Pengujian, deploy, README, dan aplikasi Streamlit |
+| Haidar Yahya | 2402909 | Audit data dan pembersihan, EDA, baseline dan perbandingan, Laporan |
+| Achmad Choeron | 2403160 | Threshold biaya, kalibrasi, dan evaluasi final, aplikasi Streamlit, deploy, Video |
 
 
 ## Masalah dan pengguna
