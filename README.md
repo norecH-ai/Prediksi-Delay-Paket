@@ -1,6 +1,7 @@
 # Prediksi Keterlambatan Paket (Hub Bandung) · Tim OTOKOWOK
 
-**Kasus:** 08 · Keterlambatan paket · **Aplikasi:** https://prediksi-delay-paket-a9hwlyfxdj9gg7expzv8cp.streamlit.app/ · **Video:** https://drive.google.com/file/d/1KxLZppon2mMZPtcqVkzfETvZXXt-2byF/view?usp=drive_link
+**Kasus:** 08 · Keterlambatan paket · **Aplikasi:** https://prediksi-delay-paket-a9hwlyfxdj9gg7expzv8cp.streamlit.app/
+**Video:** https://drive.google.com/file/d/1KxLZppon2mMZPtcqVkzfETvZXXt-2byF/view?usp=drive_link
 
 | Anggota | NIM | Bagian yang dikerjakan |
 |---|---|---|
